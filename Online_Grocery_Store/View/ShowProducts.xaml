@@ -1,0 +1,26 @@
+﻿<UserControl x:Class="Online_Grocery_Store.View.ShowProducts"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Online_Grocery_Store.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Grid Background="White">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.5*"/>
+                <ColumnDefinition Width="7*"/>
+                <ColumnDefinition Width="0.5*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.5*"/>
+                <RowDefinition Height="7*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+            <DataGrid ItemsSource="{Binding ProductDG}" ColumnWidth="0.25*" Grid.Row="1" Grid.Column="1" FontSize="15" />
+            <Button Command="{Binding scmd}" CommandParameter="BackAdmin" Content="Back" Grid.Row="2" Grid.Column="1" FontSize="15px" Height="30px" Width="100px"/>
+        </Grid>
+        <ContentControl Content="{Binding Page}"/>
+    </Grid>
+</UserControl>
